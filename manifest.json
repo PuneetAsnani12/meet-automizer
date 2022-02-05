@@ -1,0 +1,27 @@
+{
+  "name": "Meet-Automizer",
+  "description": "Automize meetings in google meet",
+  "version": "1.0.0",
+  "manifest_version": 3,
+  "permissions": ["storage", "activeTab", "scripting", "webNavigation"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "host_permissions": ["*://*/*", "<all_urls>"],
+  "action": {
+    "default_title": "Meet-Automizer",
+    "default_icon": {
+      "16": "/images/meet_automizer16.png",
+      "32": "/images/meet_automizer32.png",
+      "48": "/images/meet_automizer48.png",
+      "128": "/images/meet_automizer128.png"
+    },
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "16": "/images/meet_automizer16.png",
+    "32": "/images/meet_automizer32.png",
+    "48": "/images/meet_automizer48.png",
+    "128": "/images/meet_automizer128.png"
+  }
+}
