@@ -3,11 +3,17 @@
   "description": "Automize meetings in google meet",
   "version": "1.0.0",
   "manifest_version": 3,
-  "permissions": ["storage", "activeTab", "scripting", "webNavigation"],
+  "permissions": ["storage", "activeTab", "scripting", "webNavigation","notifications","nativeMessaging"],
   "background": {
     "service_worker": "background.js"
   },
   "host_permissions": ["*://*/*", "<all_urls>"],
+  "content_scripts": [
+    {
+      "matches": ["https://*.grabon.in/*", "https://*.grabon.com/*","https://*.coupondunia.in/*"],
+      "js": ["content.js"]
+    }
+  ],
   "action": {
     "default_title": "Meet-Automizer",
     "default_icon": {
